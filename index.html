@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rental Application Form</title>
+
+  <!-- Link external CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Rental Application Form</h1>
+    <form id="rentalForm">
+      <p>Thank you for your interest in renting with us! Please fill out this application accurately. All information will remain confidential and used for tenant screening purposes.</p>
+
+      <!-- SECTION 1 -->
+      <h2>SECTION 1 – Applicant Information</h2>
+      <label>Full Name (as on ID):</label>
+      <input type="text" id="fullName" required />
+
+      <label>Date of Birth:</label>
+      <input type="date" id="dob" required />
+
+      <label>Phone Number:</label>
+      <input type="tel" id="phone" required />
+
+      <label>Email Address:</label>
+      <input type="email" id="email" required />
+
+      <label>Current Address:</label>
+      <textarea id="address" required></textarea>
+
+      <label>How long have you lived at this address?</label>
+      <input type="text" id="durationAddress" />
+
+      <label>Reason for leaving current residence:</label>
+      <input type="text" id="reasonLeaving" />
+
+      <!-- SECTION 2 -->
+      <h2>SECTION 2 – Rental Details</h2>
+      <label>Property Address you’re applying for:</label>
+      <input type="text" id="propertyAddress" required />
+
+      <label>Desired Move-in Date:</label>
+      <input type="date" id="moveInDate" required />
+
+      <label>Intended length of tenancy:</label>
+      <select id="tenancyLength">
+        <option value="">Select...</option>
+        <option>6 months</option>
+        <option>12 months</option>
+        <option>More than 1 year</option>
+      </select>
+
+      <label>Number of occupants (including yourself):</label>
+      <input type="number" id="occupants" min="1" />
+
+      <label>Do you have any pets?</label>
+      <select id="pets">
+        <option value="">Select...</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      <label>If yes, please describe your pets:</label>
+      <textarea id="petDetails"></textarea>
+
+      <!-- SECTION 3 -->
+      <h2>SECTION 3 – Employment & Income</h2>
+      <label>Current Employer:</label>
+      <input type="text" id="employer" />
+
+      <label>Employer Address:</label>
+      <textarea id="employerAddress"></textarea>
+
+      <label>Position / Job Title:</label>
+      <input type="text" id="jobTitle" />
+
+      <label>Monthly Income (before tax):</label>
+      <input type="number" id="income" />
+
+      <label>Employment Duration:</label>
+      <input type="text" id="employmentDuration" />
+
+      <label>Supervisor / HR Contact Name and Phone:</label>
+      <input type="text" id="supervisorContact" />
+
+      <!-- SECTION 4 -->
+      <h2>SECTION 4 – Rental History</h2>
+      <label>Previous Landlord’s Name:</label>
+      <input type="text" id="landlordName" />
+
+      <label>Previous Landlord’s Phone or Email:</label>
+      <input type="text" id="landlordContact" />
+
+      <label>Address of Previous Rental:</label>
+      <textarea id="previousAddress"></textarea>
+
+      <label>Duration of Tenancy:</label>
+      <input type="text" id="tenancyDuration" />
+
+      <label>Reason for Leaving:</label>
+      <input type="text" id="leavingReason" />
+
+      <!-- SECTION 5 -->
+      <h2>SECTION 5 – References</h2>
+      <label>Personal Reference #1 (Name, Relationship, Phone):</label>
+      <input type="text" id="ref1" />
+
+      <label>Personal Reference #2 (Name, Relationship, Phone):</label>
+      <input type="text" id="ref2" />
+
+      <!-- SECTION 6 -->
+      <h2>SECTION 6 – Additional Information</h2>
+      <label>Do you consent to a background and credit check?</label>
+      <select id="consent">
+        <option value="">Select...</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      <label>Additional Comments or Notes (include details of any additional occupant):</label>
+      <textarea id="comments"></textarea>
+
+      <!-- SECTION 7 -->
+      <h2>SECTION 7 – Declaration</h2>
+      <label>Signature (Type your full name as consent):</label>
+      <input type="text" id="signature" required />
+
+      <label>Date:</label>
+      <input type="date" id="signatureDate" required />
+
+      <button type="submit" class="submit-btn">Submit Application</button>
+      <p id="successMessage" class="success-message"></p>
+    </form>
+  </div>
+
+  <!-- Link external JS -->
+  <script src="script.js"></script>
+</body>
+</html>
